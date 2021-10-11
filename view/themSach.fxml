@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="567.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ThemSachController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <VBox alignment="TOP_CENTER" layoutX="189.0" layoutY="177.0" prefHeight="567.0" prefWidth="534.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="57.0" prefWidth="170.0" text="Thêm Sách ">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="addMaSach" alignment="CENTER" prefHeight="67.0" prefWidth="265.0" promptText="Mã sách" />
+                  <TextField fx:id="addTenSach" alignment="CENTER" prefHeight="67.0" prefWidth="265.0" promptText="Tên sách" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="addTacGia" alignment="CENTER" prefHeight="67.0" prefWidth="265.0" promptText="Tác giả" />
+                  <TextField fx:id="addNhaXuatBan" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="265.0" promptText="Nhà xuất bản" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="addDonGia" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="265.0" promptText="Đơn giá" />
+                  <TextField fx:id="addNamXuatBan" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="265.0" promptText="Năm Xuất Bản" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="addGioiThieu" alignment="CENTER" prefHeight="109.0" prefWidth="535.0" promptText="Giới thiệu" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addBook" prefHeight="71.0" prefWidth="274.0" text="Thêm" />
+                  <Button layoutX="140.0" layoutY="25.0" mnemonicParsing="false" onAction="#cancel" prefHeight="71.0" prefWidth="274.0" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

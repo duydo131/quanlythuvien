@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="519.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DanhSachDocGiaController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <HBox alignment="CENTER" layoutY="435.0" prefHeight="84.0" prefWidth="601.0">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#quayLai" prefHeight="25.0" prefWidth="124.0" text="Quay Lại" />
+         </children>
+      </HBox>
+      <TableView fx:id="docGiaTable" prefHeight="437.0" prefWidth="601.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="42.0" text="ID" />
+          <TableColumn fx:id="tenDG" prefWidth="103.0" text="Tên Độc Giả" />
+            <TableColumn fx:id="gioiTinh" prefWidth="65.0" text="Giới Tính" />
+            <TableColumn fx:id="diaChi" prefWidth="90.0" text="Địa Chỉ" />
+            <TableColumn fx:id="ngaySinh" prefWidth="75.0" text="Ngày Sinh" />
+            <TableColumn fx:id="cmnd" prefWidth="75.0" text="CMND" />
+            <TableColumn fx:id="email" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="dienThoai" prefWidth="75.0" text="Điện Thoại" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

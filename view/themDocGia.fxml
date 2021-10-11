@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="594.0" prefWidth="553.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ThemDocGiaController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="36.0" layoutY="41.0" prefHeight="594.0" prefWidth="553.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="57.0" prefWidth="212.0" text="Thêm Độc Giả ">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="addMaDG" alignment="CENTER" prefHeight="69.0" prefWidth="279.0" promptText="Mã độc giả" />
+                  <TextField fx:id="addGioiTinh" alignment="CENTER" prefHeight="70.0" prefWidth="273.0" promptText="Giới tính" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="addEmail" alignment="CENTER" prefHeight="67.0" prefWidth="279.0" promptText="Email" />
+                  <DatePicker fx:id="addNgaySinh" prefHeight="67.0" prefWidth="279.0" promptText="                               Ngày Sinh" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="addCMND" alignment="CENTER" prefHeight="67.0" prefWidth="279.0" promptText="CMND" />
+                  <TextField fx:id="addSdt" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="275.0" promptText="Điện Thoại" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="addtendg" alignment="CENTER" prefHeight="67.0" prefWidth="279.0" promptText="Tên Độc Giả" />
+                  <TextField fx:id="addDiachi" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="279.0" promptText="Địa Chỉ" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addDG" prefHeight="71.0" prefWidth="274.0" text="Thêm" />
+                  <Button layoutX="140.0" layoutY="25.0" mnemonicParsing="false" onAction="#cancel" prefHeight="71.0" prefWidth="274.0" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="402.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ThuVienSachController">
+   <children>
+      <AnchorPane prefHeight="571.0" prefWidth="570.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="1.0" layoutY="337.0" prefHeight="64.0" prefWidth="603.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#quayLai" prefHeight="25.0" prefWidth="130.0" text="Quay Lại" />
+               </children>
+            </HBox>
+            <TableView fx:id="sachTable" layoutX="-1.0" prefHeight="337.0" prefWidth="610.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="tenSach" prefWidth="75.0" text="Tên Sách" />
+                  <TableColumn fx:id="tacGia" prefWidth="75.0" text="Tác Giả" />
+                  <TableColumn fx:id="nhaXB" prefWidth="75.0" text="Nhà XB" />
+                  <TableColumn fx:id="namXB" prefWidth="75.0" text="Năm XB" />
+                  <TableColumn fx:id="donGia" prefWidth="75.0" text="Đơn Giá" />
+                  <TableColumn fx:id="gioiThieu" prefWidth="158.0" text="Giới Thiệu" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <BorderPane prefHeight="429.0" prefWidth="622.0">
+         <top>
+            <MenuBar prefHeight="6.0" prefWidth="597.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <right>
+            <VBox prefHeight="375.0" prefWidth="125.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#themDocGia" prefHeight="82.0" prefWidth="125.0" text="Thêm độc giả" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#themSach" prefHeight="83.0" prefWidth="125.0" text="Thêm sách" />
+                  <Button layoutX="10.0" layoutY="66.0" mnemonicParsing="false" onAction="#danhSachDocGia" prefHeight="88.0" prefWidth="125.0" text="Danh sách độc giả" />
+                  <Button layoutX="10.0" layoutY="122.0" mnemonicParsing="false" onAction="#thuVienSach" prefHeight="86.0" prefWidth="125.0" text="Thư viện sách" />
+                  <Button layoutX="10.0" layoutY="122.0" mnemonicParsing="false" onAction="#quanLyThuThu" prefHeight="84.0" prefWidth="125.0" text="Quản lý thủ thư" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#muonSach" prefHeight="76.0" prefWidth="125.0" text="Mượn sách" />
+                  <Button layoutX="10.0" layoutY="310.0" mnemonicParsing="false" onAction="#TraSach" prefHeight="75.0" prefWidth="125.0" text="Trả sách" />
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Quản lý sách">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="346.0" prefWidth="475.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="515.0">
+                                       <children>
+                                          <TextField fx:id="tenSachSearch" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="257.0" promptText="Tìm kiếm theo mã" />
+                                          <Button mnemonicParsing="false" onAction="#timKiemSach" prefHeight="25.0" prefWidth="70.0" text="Tìm kiếm" />
+                                          <Button mnemonicParsing="false" onAction="#xoaSach" prefHeight="25.0" prefWidth="70.0" text="Xóa" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="187.0" prefWidth="475.0">
+                                       <children>
+                                          <TableView fx:id="qlsachTable" prefHeight="187.0" prefWidth="537.0">
+                                            <columns>
+                                              <TableColumn fx:id="maSach" prefWidth="64.0" text="Mã sách" />
+                                              <TableColumn fx:id="tenSach" prefWidth="65.0" text="Tên sách" />
+                                                <TableColumn fx:id="tacGia" prefWidth="67.0" text="Tác giả" />
+                                                <TableColumn fx:id="nhaXB" prefWidth="65.0" text="Nhà XB" />
+                                                <TableColumn fx:id="namXB" prefWidth="63.0" text="Năm XB" />
+                                                <TableColumn fx:id="donGia" prefWidth="73.0" text="Đơn giá" />
+                                                <TableColumn fx:id="gioiThieu" prefWidth="139.0" text="Giới thiệu" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="148.0" prefWidth="515.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Quản lý độc giả">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutX="108.0" layoutY="35.0" prefHeight="346.0" prefWidth="475.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                 </bottom>
+                                 <top>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="515.0">
+                                                   <children>
+                                                      <TextField fx:id="tenDocGiaSearch" prefHeight="25.0" prefWidth="257.0" promptText="Tìm kiếm theo mã" />
+                                                      <Button mnemonicParsing="false" onAction="#timKiemDocGia" prefHeight="25.0" prefWidth="70.0" text="Tìm kiếm" />
+                                                      <Button mnemonicParsing="false" onAction="#xoaDocGia" prefHeight="25.0" prefWidth="70.0" text="Xóa" />
+                                                   </children>
+                                                </HBox>
+                                                <TableView fx:id="qldgTable" prefHeight="182.0" prefWidth="537.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="maDG" prefWidth="64.0" text="Mã ĐG" />
+                                                    <TableColumn fx:id="tenDG" prefWidth="64.0" text="Tên ĐG" />
+                                                      <TableColumn fx:id="gioiTinh" prefWidth="64.0" text="Giới Tính" />
+                                                      <TableColumn fx:id="diaChi" prefWidth="72.0" text="Địa Chỉ" />
+                                                      <TableColumn fx:id="ngaySinh" prefWidth="65.0" text="Ngày Sinh" />
+                                                      <TableColumn fx:id="cmnd" prefWidth="68.0" text="CMND" />
+                                                      <TableColumn fx:id="email" prefWidth="68.0" text="Email" />
+                                                      <TableColumn fx:id="sdt" prefWidth="71.0" text="SĐT" />
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Quản lý mượn sách">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="208.0" layoutY="56.0" prefHeight="413.0" prefWidth="537.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="537.0">
+                                       <children>
+                                          <TextField fx:id="mamtSearch" prefHeight="25.0" prefWidth="257.0" promptText="Tìm kiếm theo mã mượn trả" />
+                                          <Button mnemonicParsing="false" onAction="#timkiemMamt" prefHeight="25.0" prefWidth="70.0" text="Tìm kiếm" />
+                                          <Button layoutX="267.0" layoutY="35.0" mnemonicParsing="false" onAction="#xoaMamt" prefHeight="25.0" prefWidth="70.0" text="Xóa" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="278.0" prefWidth="537.0">
+                                       <children>
+                                          <TableView fx:id="qlmtTable" prefHeight="278.0" prefWidth="540.0">
+                                            <columns>
+                                              <TableColumn fx:id="maMt" prefWidth="57.0" text="Mã MT" />
+                                              <TableColumn fx:id="maSachMT" prefWidth="61.0" text="Mã Sách" />
+                                                <TableColumn fx:id="tenSachMT" prefWidth="95.0" text="Tên Sách" />
+                                                <TableColumn fx:id="maDGMT" prefWidth="75.0" text="Mã Độc Giả" />
+                                                <TableColumn fx:id="tenDGMT" prefWidth="87.0" text="Tên Độc Giả" />
+                                                <TableColumn fx:id="ngayMuon" prefWidth="83.0" text="Ngày Mượn" />
+                                                <TableColumn fx:id="trangThai" prefWidth="78.0" text="Trạng Thái" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

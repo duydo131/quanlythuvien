@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="493.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MuonSachController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <VBox alignment="TOP_CENTER" layoutX="212.0" layoutY="34.0" prefHeight="493.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="57.0" prefWidth="170.0" text="Mượn Sách" textAlignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="107.0" prefWidth="555.0">
+               <children>
+                  <TextField fx:id="mamt" prefHeight="67.0" prefWidth="265.0" promptText="Mã Mượn Trả" />
+                  <TextField fx:id="madg" layoutX="10.0" layoutY="30.0" prefHeight="67.0" prefWidth="265.0" promptText="Mã Độc Giả" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="114.0" prefWidth="555.0">
+               <children>
+                  <TextField fx:id="tendg" prefHeight="67.0" prefWidth="265.0" promptText="Tên Độc Giả" />
+                  <TextField fx:id="tensach" layoutX="10.0" layoutY="34.0" prefHeight="67.0" prefWidth="265.0" promptText="Tên Sách" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="112.0" prefWidth="555.0">
+               <children>
+                  <DatePicker fx:id="ngaymuon" prefHeight="67.0" prefWidth="265.0" promptText="Ngày Mượn" />
+                  <DatePicker fx:id="ngayhentra" prefHeight="67.0" prefWidth="265.0" promptText="Ngày Hẹn Trả" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="69.0" prefWidth="555.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addMuonSach" prefHeight="47.0" prefWidth="144.0" text="Thêm" />
+                  <Button layoutX="216.0" layoutY="21.0" mnemonicParsing="false" onAction="#quaylai" prefHeight="47.0" prefWidth="144.0" text="Quay Lại" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
